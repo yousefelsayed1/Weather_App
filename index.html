@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/normlize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class=" navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container d-flex ">
+                <a class="branding" href="#">
+                    <img src="./img/logo.png" alt="Weather Logo" class="logo">
+                    <div class="logo-type">
+                        <h1 class="site-title">Weather</h1>
+                        <small class="site-description">tagline goes here</small>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler bg-primary " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center ">
+                    <li class="navbar-nav pt-1 ">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="#">Live Cameras</a>
+                    </li>
+
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+
+                    <li class="nav-item pt-1">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+      </nav>
+    </header>
+
+    <section class="body-weather ">
+        <div class="container py-5">
+            <div class="find-location position-relative">
+                <input type="text" placeholder="Find your location..." id="search">
+                <button class="btn btn-primary text-white"> Find</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="forecast-table  rounded-3">
+        <div class="container pt-5">
+            <div class="row g-0  forecast-container">
+                <div class="col-md-4">
+                    <div class=" forecast-header rounded-start-3 text-center bg-primary d-flex justify-content-between px-3 py-3" id="today">
+                        <div class="todayDay"></div>
+                        <div class=" date"><span class="number"></span> <span class="month"></span></div>
+                    </div>
+                    <div id="locationWeather" class="location ps-5 pt-3 fs-5"></div>
+
+                    <div class="degree">
+                        <div class="num ps-5 pt-3 display-1 text-center text-white"><span></span><sup>o</sup>C</div>
+                        <div class="forecast-icon d-flex">
+                        <img  class="ms-5 iconWeather" width="90">
+                        <p class="text-primary fs-6 ps-2 parWeather"></p>
+                        </div>	
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="forecast-header  px-3 py-3  bg-primary d-flex justify-content-between">
+                        <div class=" day m-auto"></div>
+                    </div> 
+                    <div class="forecast-content">
+                        <div class="forecast-icon d-flex justify-content-center">
+                            <img  class=" nextIcon pt-3 pb-2" width="70">
+                        </div>
+                        <div class="degree nextDegree text-center fs-4 text-white fw-semibold"><span></span><sup>o</sup>C</div>
+                        <div class="text-center nextDegree2 pb-4 fs-6"><span></span><sup class="text-center">o</sup></div>
+                        <div class="custom text-center fs-6 text-primary"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="forecast-header rounded-end-3  px-3 py-3  bg-primary d-flex justify-content-between">
+                        <div class="day m-auto"></div>
+                    </div>
+                    <div class="forecast-content">
+                        <div class="forecast-icon d-flex justify-content-center">
+                            <img  class=" nextIcon pt-3 pb-2" width="70">
+                        </div>
+                        <div class="nextDegree degree text-center fs-4 text-white fw-semibold"><span></span><sup>o</sup>C</div>
+                        <div class="text-center nextDegree2 pb-4 fs-6"><span></span><sup>o</sup></div>
+                        <div class="custom text-center fs-6 text-primary"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="subscribe-form position-relative">
+                        <input type="text" placeholder="Enter your email to subscribe..." id="search">
+                        <button class="btn btn-primary text-white"> Search</button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="social-links pt-3 ps-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f fs-3"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter fs-3 mx-2"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus me-2 fs-3"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest fs-3"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="colophon pt-4">Copyright 2014 Company name. Designed by joe. All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
