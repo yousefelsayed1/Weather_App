@@ -1,19 +1,10 @@
 
-let locationWeather = document.getElementById("locationWeather");
-let degreeWeather = document.querySelector(".degree .num span");
-let iconWeather = document.querySelector(".forecast-icon .iconWeather");
-let descWeather = document.querySelector(".forecast-icon .parWeather");
 let nextIcon = document.querySelectorAll(".forecast-icon .nextIcon");
 let nextDegree = document.querySelectorAll(".nextDegree span");
 let nextDegree2 = document.querySelectorAll(".nextDegree2 span");
 let nextCustom = document.querySelectorAll(".custom");
-let todayDay = document.querySelector(".forecast-header .todayDay");
-let todayDate = document.querySelector(".forecast-header .date .month");
-let todayNumber = document.querySelector(".forecast-header .date .number");
 let nextDay = document.querySelectorAll(".forecast-header .day");
-
 let search = document.getElementById("search");
-
 
 let allData = {};
 async function getWeather(cityName){
@@ -25,13 +16,13 @@ async function getWeather(cityName){
 
 function displayCurrentWeather(data){
     let today = new Date();
-    todayDay.innerHTML = today.toLocaleDateString("en-us" , {weekday:"long"});
-    todayDate.innerHTML = today.toLocaleDateString("en-us" , {month:"long"});
-    todayNumber.innerHTML = today.getDate();
-    locationWeather.innerHTML = data.location.name;
-    degreeWeather.innerHTML = data.current.temp_c;
-    iconWeather.setAttribute("src" , `https:${data.current.condition.icon}`);
-    descWeather.innerHTML = data.current.condition.text;
+    document.querySelector(".forecast-header .todayDay").innerHTML = today.toLocaleDateString("en-us" , {weekday:"long"});
+    document.querySelector(".forecast-header .date .month").innerHTML = today.toLocaleDateString("en-us" , {month:"long"});
+    document.querySelector(".forecast-header .date .number").innerHTML = today.getDate();
+    document.getElementById("locationWeather").innerHTML = data.location.name;
+    document.querySelector(".degree .num span").innerHTML = data.current.temp_c;
+    document.querySelector(".forecast-icon .iconWeather").setAttribute("src" , `https:${data.current.condition.icon}`);
+    document.querySelector(".forecast-icon .parWeather").innerHTML = data.current.condition.text;
 }
 
 function displayNextWeather(data){
